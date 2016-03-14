@@ -1,0 +1,65 @@
+<%= form_for(@github_user) do |f| %>
+  <% if @github_user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@github_user.errors.count, "error") %> prohibited this github_user from being saved:</h2>
+
+      <ul>
+      <% @github_user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :github_login %><br>
+    <%= f.text_field :github_login %>
+  </div>
+  <div class="field">
+    <%= f.label :github_id %><br>
+    <%= f.number_field :github_id %>
+  </div>
+  <div class="field">
+    <%= f.label :avatar_url %><br>
+    <%= f.text_field :avatar_url %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :html_url %><br>
+    <%= f.text_field :html_url %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :company %><br>
+    <%= f.text_field :company %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :public_repos %><br>
+    <%= f.number_field :public_repos %>
+  </div>
+  <div class="field">
+    <%= f.label :github_created_at %><br>
+    <%= f.datetime_select :github_created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :github_updated_at %><br>
+    <%= f.datetime_select :github_updated_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

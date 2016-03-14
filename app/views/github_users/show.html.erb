@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Github login:</strong>
+  <%= @github_user.github_login %>
+</p>
+
+<p>
+  <strong>Github:</strong>
+  <%= @github_user.github_id %>
+</p>
+
+<p>
+  <strong>Avatar url:</strong>
+  <%= @github_user.avatar_url %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @github_user.url %>
+</p>
+
+<p>
+  <strong>Html url:</strong>
+  <%= @github_user.html_url %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @github_user.type %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @github_user.name %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @github_user.company %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @github_user.email %>
+</p>
+
+<p>
+  <strong>Public repos:</strong>
+  <%= @github_user.public_repos %>
+</p>
+
+<p>
+  <strong>Github created at:</strong>
+  <%= @github_user.github_created_at %>
+</p>
+
+<p>
+  <strong>Github updated at:</strong>
+  <%= @github_user.github_updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_github_user_path(@github_user) %> |
+<%= link_to 'Back', github_users_path %>
