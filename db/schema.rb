@@ -11,23 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160314182814) do
+ActiveRecord::Schema.define(version: 20160315033905) do
 
   create_table "github_users", force: :cascade do |t|
     t.string   "github_login"
-    t.integer  "github_id"
-    t.string   "avatar_url"
-    t.string   "url"
-    t.string   "html_url"
-    t.string   "type"
-    t.string   "name"
-    t.string   "company"
-    t.string   "email"
-    t.integer  "public_repos"
-    t.datetime "github_created_at"
-    t.datetime "github_updated_at"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end
